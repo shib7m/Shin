@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 43 78% 52%; /* Gold */
+  --primary-foreground: 20 14.3% 4.1%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 43 78% 52%; /* Gold */
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --chart-1: 43 78% 52%; /* Gold */
+  --chart-2: 39 67% 39%; /* Darker gold */
+  --chart-3: 45 90% 67%; /* Lighter gold */
+  --chart-4: 43 78% 52%; /* Gold again */
+  --chart-5: 39 67% 39%; /* Darker gold again */
+  --sidebar-background: 0 0% 13%; /* Dark */
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 43 78% 52%; /* Gold */
+  --sidebar-primary-foreground: 0 0% 13%; /* Dark */
+  --sidebar-accent: 43 78% 52%; /* Gold */
+  --sidebar-accent-foreground: 0 0% 13%; /* Dark */
+  --sidebar-border: 0 0% 20%; /* Slightly lighter dark */
+  --sidebar-ring: 43 78% 52%; /* Gold */
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 13%; /* Dark */
+  --foreground: 0 0% 98%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --popover: 0 0% 13%; /* Dark */
+  --popover-foreground: 0 0% 98%;
+  --card: 0 0% 13%; /* Dark */
+  --card-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --primary: 43 78% 52%; /* Gold */
+  --primary-foreground: 0 0% 13%; /* Dark */
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 43 78% 52%; /* Gold */
+  --accent-foreground: 0 0% 13%; /* Dark */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 0 0% 20%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-foreground font-tajawal antialiased;
+  }
+}
+
+/* Gold and black theme */
+.gold {
+  color: #D4AF37;
+}
+
+.gold-dark {
+  color: #B8860B;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.bg-gold-dark {
+  background-color: #B8860B;
+}
+
+.bg-dark {
+  background-color: #222222;
+}
+
+.bg-dark-darker {
+  background-color: #111111;
+}
+
+.border-gold {
+  border-color: #D4AF37;
+}
+
+.gradient-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1607853554439-0069ec0f29b6?auto=format&fit=crop&w=1920&h=1080') center/cover no-repeat;
+}
+
+.gold-gradient {
+  background: linear-gradient(90deg, #B8860B 0%, #D4AF37 50%, #B8860B 100%);
+}
+
+.hover-gold:hover {
+  color: #D4AF37;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Custom font sizes */
+.font-tajawal {
+  font-family: 'Tajawal', sans-serif;
+}
